@@ -1,0 +1,56 @@
+[build-system]
+requires = ["uv"]
+build-backend = "uv.build_api"
+
+[project]
+name = "MIRACLE"
+version = "1.0.1"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic==0.23.1",
+    "google-generativeai==0.5.1",
+    "nltk==3.8.1",
+    "pdfplumber==0.11.1",
+    "playwright==1.44.0",
+    "pyautogen==0.2.27",
+    "pydantic==2.6.2",
+    "python-dotenv==1.0.0",
+    "tabulate==0.9.0",
+    "nest-asyncio==1.6.0",
+    "fastapi==0.111.1",
+    "uvicorn==0.30.3"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.0.79", # Ruff as a dev dependency for linting
+    "sphinx>=4.0.0", # for docs generation
+    "sphinx-rtd-theme>=1.0.0" # for docs generation
+]
+
+[project.scripts]
+run = "main.py"
+
+[tool.ruff]
+src = ["web_agent"]
+fix = false
+show-fixes = true
+show-source = true
+line-length = 250
+
+[tool.ruff.lint]
+select = [
+    "B",  # flake8-bugbear
+    "E",  # pycodestyle error
+    "F",  # pyflakes
+    "I",  # isort
+    "UP",  # pyupgrade
+    "W",  # pycodestyle warning
+]
+ignore = ["E501"]  # Ignore the "line too long" rule
+
+
+[tool.ruff.lint.isort]
+force-single-line = true
+order-by-type = false
