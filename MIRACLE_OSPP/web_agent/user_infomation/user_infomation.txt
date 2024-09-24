@@ -1,0 +1,11 @@
+Personal Info:
+First Name: Albus
+Last Name: Einstein
+Date of birth: 7/1/2000
+Occupation: Coding Peasant
+Email: myqqemail@qq.com
+Phone Number: (+86)12345678901
+Here are some of my preferences:
+Shopping Preferences: www.amazon.com
+Favorite news source: www.bbc.com
+Favorite flight booking site to use with every flight related query: https://www.google.com/travel/flights

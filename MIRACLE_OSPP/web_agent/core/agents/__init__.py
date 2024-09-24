@@ -1,0 +1,1 @@
+from web_agent.core.agents.browser_nav_agent import BrowserNavAgent
